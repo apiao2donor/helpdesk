@@ -138,7 +138,13 @@ const routes = [
       {
         path: "contacts",
         name: AGENT_PORTAL_CONTACT_LIST,
-        component: () => import("@/pages/desk/contact/ContactList.vue"),
+        component: () => import("@/pages/Contacts.vue"),
+      },
+      {
+        path: "contacts/:contactId",
+        props: true,
+        name: "Contact",
+        component: () => import("@/pages/Contact.vue"),
       },
       {
         path: "agents",
